@@ -6,7 +6,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-    main {
+    .about-desktop {
         display: flex;
         justify-content: space-between;
         height: 50%;
@@ -65,9 +65,80 @@ export const Container = styled.div`
         }
 
     }
+    .about-mobile {
+        display: none;
+    }
 
     @media screen and (max-width: 992px) {
-        height: auto;
+        /* height: auto; */
+        .about-desktop {
+            display: none;
+        }
+        .about-mobile {
+            /* border: 1px solid red; */
+            /* height: calc( 100vh - 70px ); */
+            height: 100%;
+            width: 95%;
+            margin: 0 auto;
+            display: block;
+            padding: 2rem 20px ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            section {
+                /* border: 1px solid blue; */
+            }
+            .main-img {
+                /* padding-top: 20px; */
+                height: 45%;
+                display: flex;
+                .main-media {
+                    /* padding-left: 10px; */
+                    max-height: 200px;
+                    margin: auto 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    /* border: 1px solid green; */
+                    img {
+                        width: 24px;
+                        margin: 10px 0;
+                        /* margin: 20px 0; */
+                    }
+                }
+                .main-profile {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        border-radius: 50%;
+                        height: 80%;//30vh;
+                    }
+                }
+            }
+            .main-description {
+                /* border: 1px solid red; */
+                height: 55%;
+                max-height: 275px;
+                .description-text {
+                    h1, h2, p {
+                        font-weight: 500;
+                    }
+                    h1 {
+                        font-size: 24px;
+                    }
+                    h2, p {
+                        color: #74737a;
+                        font-size: 16px;
+                    }
+                    p {
+                        max-width: 440px;
+                        margin: 30px 0 20px;
+                    }
+                }
+            }
+        }
     }
 
 `;

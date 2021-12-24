@@ -1,6 +1,7 @@
 import React from "react";
 
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
+import Button from "../../../components/Button";
 
 import { Container } from "./styles";
 
@@ -25,23 +26,23 @@ const About: React.FC = () => {
 
   return (
     <Container className="about">
-      <main>
+      <main className="about-desktop">
         <section className="main-welcome">
           <aside>
             <div>
               <span className="font-small">Bem vindo ao meu mundo.</span>
               {/* <p>Olá, me chamo <span>Gabriel</span>  sou um estudante e Desenvolvedor Front end</p> */}
               <p id="app">
-                            <Typewriter
-                                onInit={(typewriter: any) => {
-                                    typewriter.typeString('Olá, me chamo <span class="my-name">Gabriel</span>  sou um estudante e Desenvolvedor Front end')
-                                    .pauseFor(2500)
-                                    .deleteChars(9)
-                                    typewriter.typeString('Full Stack?')
-                                    .start();
-                                }}
-                            />
-                            </p>
+                <Typewriter
+                  onInit={(typewriter: any) => {
+                    typewriter
+                      .typeString(
+                        'Olá, me chamo <span class="my-name">Gabriel</span>  sou um estudante e Desenvolvedor Front end'
+                      )
+                      .start();
+                  }}
+                />
+              </p>
             </div>
             <div className="main-midias-sociais">
               <span className="font-small">Minhas midias sociais</span>
@@ -70,6 +71,40 @@ const About: React.FC = () => {
                     </div> */}
         </section>
       </main>
+      <main className="about-mobile">
+        <section className="main-img">
+          <aside className="main-media">
+            {imgs.map(({ icon, name, link }) => (
+              <img
+                draggable="false"
+                key={name}
+                src={String("/assets/icon/" + icon).replace(".svg", "-blue.svg") }
+                alt={name}
+                onClick={() => {
+                  window.open(link);
+                }}
+              />
+            ))}
+          </aside>
+          <aside className="main-profile">
+            <img
+              src="https://avatars.githubusercontent.com/u/62632117?v=4"
+              alt="Me"
+            />
+          </aside>
+        </section>
+        <section className="main-description">
+          <div className="description-text">
+            <h1>Olá, Eu sou o Gabriel</h1>
+            <h2>Desenvolvedor Frontend</h2>
+            <p>Sou um programador júnior e tenho contato com tecnologias como Angular, React, Photoshop e Figma.</p>
+          </div>
+          <div className="description-btn">
+            <Button text="Contrate-me"/>
+          </div>
+        </section>
+      </main>
+
       {/* <div className="home-page-container">
             <main>
             </main>

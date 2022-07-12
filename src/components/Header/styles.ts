@@ -11,6 +11,8 @@ export const Cabecalho = styled.header`
     justify-content: space-between;
     padding: 1rem;
     a {
+        display: flex;
+        align-items: center;
         color: #0e1e25;
         text-decoration: none;
         font-size: 1.4rem;

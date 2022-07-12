@@ -4,6 +4,9 @@ import emailjs from "emailjs-com"
 
 import { Container } from './styles';
 
+import Nopage from '../../../components/NoPage'
+
+
 const Contact: React.FC = () => {
 
   const form = useRef(null);
@@ -22,7 +25,7 @@ const Contact: React.FC = () => {
 
   return (
     <Container className="contact">
-      <form ref={form} onSubmit={sendEmail}>
+      {/* <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
       <label>Email</label>
@@ -30,7 +33,8 @@ const Contact: React.FC = () => {
       <label>Message</label>
       <textarea name="message" />
       <input type="submit" value="Send" />
-    </form>
+    </form> */}
+      <Nopage/>
     </Container>
   );
 };

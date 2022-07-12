@@ -51,6 +51,9 @@ export const Container = styled.div`
         height: calc( 100% - 38px );
         max-width: 1640px;
         margin: 0 auto;
+        a {
+            color: black;
+        }
         .project-card {
             cursor: pointer;
             display: flex;
@@ -64,8 +67,14 @@ export const Container = styled.div`
             width: 80%;
             max-width: 420px;
             transition: .45s ease;
-            img {
+            text-decoration: none;
+            /* img {
                 width: 50%;
+            } */
+            img, iframe {
+                height: 160px;
+                object-fit: cover;
+                cursor: pointer;
             }
         }
         .project-card:hover {
@@ -75,74 +84,63 @@ export const Container = styled.div`
     }
     .project-swiper-container {
         display: none;
-    }
-    @media screen and (max-width: 992px) {
-        height: auto !important;
-
-        /*.project-container {
-            display: none;
-            justify-content: space-evenly;// space-around; 
-
-            .project-card{
-                max-width: 300px;
-                min-width: auto;
-                width: 80vw;
-                margin: 10px;
-                height: auto;
+        height: calc( 100% - 38px );
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 1rem;
+        .project-card-swiper {
+            border-radius: 8px;
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            /* min-width: 120px; */
+            height: fit-content;
+            max-height: 100vh;
+            max-width: 480px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                max-width: 280px;
             }
+            img::selection, span::selection {
+                background: transparent;
+            }
+            .project-card-description {
+                max-height: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                /* white-space: nowrap; */
+                span {
+                }
+            }
+        }
+        .project-swiper-text {
+            max-width: 280px;
+            color: #c4c4c4;
+            text-align: center;
+        }
+    }
 
-        }*/
+    @media screen and (max-height: 700px) {
         .project-container {
             display: none;
         }
         .project-swiper-container {
-            display: block;
-            margin: 0 1rem;
-            .project-card-swiper {
-                border-radius: 8px;
-                background: white;
-                padding: 1rem;
-                text-align: center;
-                /* min-width: 120px; */
-                height: fit-content;
-                max-height: 100vh;
-                img {
-                    width: 100%;
-                }
-                img::selection, span::selection {
-                    background: transparent;
-                }
-                .project-card-description {
-                    max-height: 100px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    /* white-space: nowrap; */
-                    span {
-                    }
-                }
-            }
+            display: flex;
         }
     }
 
+    @media screen and (max-width: 992px){
+        .project-container {
+            display: none;
+        }
+        .project-swiper-container {
+            display: flex;
+        }
+    }
     .swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-
-    /* @media screen and (max-width: 840px) and (max-height: 1000px) {
-            .project-container {
-                justify-content: center;
-                flex-direction: column;
-
-                .project-card{
-                    max-width: 300px;
-                    min-width: auto;
-                    width: 80vw;
-                    margin: 10px;
-                    height: auto;
-                }
-            }       
-        } */
+        width: 100%;
+        padding-bottom: 50px;
+    }
 `;

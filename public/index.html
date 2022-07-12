@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" translate="no">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta name="google" content="notranslate">
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -17,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>React App</title>
+    <title>Portfolio Gabriel</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -26,10 +27,24 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script type="text/javascript">
       (function () {
         emailjs.init("user_3NnyRPZu3hS6hAmo7Piyb");
       })();
+    </script> -->
+    <script>
+      const sr = ScrollReveal({
+        origin: 'top',
+        distance: '50px',
+        duration: 2000,
+        reset: true
+      });
+      
+      ScrollReveal().reveal('.project-card', { delay: 400 });
+      // ScrollReveal().reveal('.date', { delay: 400 });
+      // ScrollReveal().reveal('.title', { delay: 500 });
+      // ScrollReveal().reveal('.description', { delay: 600 });
     </script>
   </body>
 </html>

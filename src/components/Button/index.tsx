@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Btn } from './styles';
+import { Btn } from '../baseComponentes';
 
 interface Props {
-  text: string
+  text: string,
+  color?: string,
   method?: Function
 }
 

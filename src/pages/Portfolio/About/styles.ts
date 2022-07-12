@@ -13,6 +13,29 @@ export const Container = styled.div`
         margin: 0 auto;
         width: 85%;
         max-width: 1640px;
+        .about-midias {
+            div:first-child {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                .about-social-midias {
+                    max-width: 347px;
+                    width: 18vw;
+                    display: flex;
+                    justify-content: space-between;
+                    img {
+                        cursor: pointer;
+                        opacity: .7;
+                        width:32px;
+                        transition: ease-in-out .35s;
+                    }
+                    img:hover {
+                        opacity: 1;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
         .main-welcome {
             aside {
                 display: flex;
@@ -34,6 +57,7 @@ export const Container = styled.div`
                         }
                     }
                     .main-midias-icons {
+                        max-width: 347px;
                         width: 18vw;
                         display: flex;
                         justify-content: space-between;
